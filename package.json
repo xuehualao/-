@@ -1,0 +1,19 @@
+{
+  "name": "zss",
+  "version": "1.0.0",
+  "description": "还没写呢!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuehualao/rayzss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuehualao/rayzss/issues"
+  },
+  "homepage": "https://github.com/xuehualao/rayzss#readme"
+}
