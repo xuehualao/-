@@ -1,0 +1,237 @@
+header{
+    width: 100%;
+    height: 190px;
+    font-family: "Times New Roman", Times, Georgia, "Microsoft JhengHei", 微軟正黑體, serif;
+    .navTopWrap{
+        display: relative;
+        width: 100%;
+        height: 120px;
+        .navTop{
+            width: 100%;
+            background-color: #fff;
+            height:120px;
+            padding:40px 30px 10px ;
+            display: absolute;
+            .left-logo{
+                .rolex-tudor{
+                    .tudor{
+                        width: 76px;
+                        background-image: url(/img/tudor_120x60_en.png);
+                        height: 39px;
+                        background-size: cover;
+                        padding: 0px;
+                        float: left;
+                        border: 0px;
+                        margin-right: 5px;
+                    }
+                    .rolex{
+                        width: 79px;
+                        background-image: url(/img/Retailer_plaque_120x60-en.jpg);
+                        height: 39px;
+                        background-size: cover;
+                        padding: 0px;
+                        float: left;
+                        border: 0px;
+                    }
+                }
+                .left-item{
+                    width: 167.516px;
+                    height: 34px;
+                    margin: 38px 20px 0 0;
+                    float: left;
+                    color: black;
+                    margin-top: 38px;
+                    line-height: 30px;
+                    margin-right: 20px;
+                    position: absolute;
+                    .rmb{
+                        display: inline-block;
+                        position: absolute;
+                        padding-right: 10px;
+                        top: 4px;
+                        a{
+                            color: #020202;
+                            text-decoration: none;
+                        }
+                    }
+                  
+                    }
+                    .wz{
+                        display: block;
+                        margin-left: 10px;
+                        position: absolute;
+                        left: 79px;
+                        top: 5px;
+                    }
+                    .search{
+                        position: absolute;
+                        left: 131px;
+                        width:240px;
+                        height: 43px;
+                        padding: 5px;
+                        border: 1px solid #020202;
+                        a{
+                            i{
+                                display: block;
+                                width: 23.22px;
+                                height: 25px;
+                                background-image: url(/img/wenhao.png);
+                            }
+                        }
+                        input{
+                            width:228px;
+                            height: 30px;
+                            padding: 1px 25px 1px 30px;
+                            background:none;
+                            border-radius: 0;
+                            text-indent: 10px;
+                            box-sizing: border-box;
+                            line-height: normal;
+                            appearance: none;
+                            border: none;
+                            display: inline-block;
+                            position: absolute;
+                            top: 5px;
+                        }
+                        input:focus{
+                            outline: none;
+                     }
+
+                    }
+                    
+                }
+                .logo{
+                    margin: 0 auto;
+                    background-size: 240px 140px;
+                    background-repeat: no-repeat;
+                    background-position: 0 -70px;
+                    width: 240px;
+                    height: 70px;
+                    background-image: url(/img/logo.png);
+                }
+                .right-sh{
+                    float: right;
+                    color: black;
+                    line-height: 30px;
+                    // background-color: #bfa;
+                
+                .item{
+                    height: 31px;
+                    width: 248px;
+                    position: relative;
+                    margin-top: -31px;
+                    .not-log{
+                        display: flex;
+                        justify-content:space-between;
+    
+                    a{
+                        color: #020202;
+                        text-decoration: none;
+                        display: inline;
+                    }
+                    .icon-mianxing-08{
+                        font-size: 25px;
+                     
+                    }
+                    .icon-gouwudai{
+                        font-size: 25px;
+                    }
+                    .xinyuan{
+                        width: 14px;
+                        height: 14px;
+                        background-color: #cecece;
+                        color: #020202;
+                        border-radius: 9px;
+                        position: absolute;
+                        top: -3px;
+                        left: 125px;
+                        p{
+                            line-height: 14px;
+                            font-size: 14px;
+                            text-align: center;
+
+                        }
+                    }
+                    .yuan{
+                        width: 14px;
+                        height: 14px;
+                        background-color: #cecece;
+                        color: #020202;
+                        border-radius: 9px;
+                        position: absolute;
+                        top: -3px;
+                        left: 165px;
+                        p{
+                            line-height: 14px;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    }
+                    /*
+                        金价资讯
+                        .gold-price{
+                        position: absolute;
+                        top: 30px;
+                        right: -15px;
+                        background: white;
+                        padding: 15px;
+                        z-index: 1;
+                        display: none;
+                        color: black;
+                        text-align: left;
+                        line-height: 1.2;
+                        box-shadow: 0 5px 10px #ccc ;
+                    }*/
+                }
+                }
+            }
+            }
+            
+         }
+    .navBottom{
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
+        ul{
+            margin-top: 20px;
+            list-style-type: none;
+            margin: 30px auto 0 auto;
+            width: 850px;
+            display: flex;
+            justify-content:space-between;
+            cursor: pointer;
+            padding: 0;
+            li{
+                height: 50px;
+                line-height: 50px;
+                .xia{
+                    color: #020202;
+                    font-size: 5px;
+                }
+            }
+        }
+    }
+    }
+aside{
+    width: 100%;
+    position: relative;
+    background: #FFF;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    overflow: hidden;
+    h2{
+        box-sizing: border-box;
+        color: #454545;
+        display: block;
+        float: left;
+        font-family: "Times New Roman", Times, Georgia, "Microsoft JhengHei", 微軟正黑體, serif;
+        font-size: 40px;
+        font-weight: 500;
+        height: 44px;
+        line-height: 44px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        text-rendering: optimizeLegibility;
+        text-size-adjust: 100%;
+    }
+}

@@ -4,4 +4,4 @@ http.createServer(function (req, res) {
         "content-type": "text/html;charset=utf-8"
     });
     res.end("<h1>blue</h1>");
-}).listen(8080, "127.0.0.1");
+}).listen(8088, "127.0.0.1");
