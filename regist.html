@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/regist.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style-cn.css">
 </head>
 
 <body>
@@ -28,11 +29,13 @@
                             <a href="">RMB(¥)</a>
                             <!-- ↓rmb的鼠标滑入表格 -->
                             <div class="rmb-price">
-                                <table>
-
-                                </table>
+                                <select class="crmRegionCN">
+                                    <option value="CN" selected>中国大陆</option>
+                                    <option value="HKD($)">中国香港/海外</option>
+                                </select>
                             </div>
                         </div>
+
                         <!-- 位置图标 -->
                         <img class="wz" src="/img/weizhi.png" alt="">
                         <!-- 搜索 -->
@@ -92,6 +95,609 @@
     <aside>
         <h2>周生生之友</h2>
     </aside>
+    <div class="dengjibanxin">
+        <div class="dengji">
+            <div class="title">
+                <h2 class="title-section">
+                    登记成为<span class="force-single-word">周生生之友</span>
+                </h2>
+                <p class="desc reg-msg">由这一刻开始，尽情享受会员尊尚折扣优惠及「悦享钱」购物奖赏，同时体验个人化礼遇及贴心服务。</p>
+            </div>
+            <form id="form-registration" class="form-registration">
+                <div class="err-msg-holder align--hc">
+                    <span class="form-err-msg--target"></span>
+                </div>
+                <div class="autofill-fix" style="display: none;">
+                    <input type="text" autocomplete="new-password">
+                    <input type="password" autocomplete="new-password">
+                </div>
+                <table class="field-grid">
+                    <tr>
+                        <td>称谓</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field field--radio field--1-1 form-check-empty-radio">
+                                    <div class="field__holder">
+                                        <div class="custom-radio">
+                                            <input type="radio" id="ac_salutation_01" name="salute" value="01">
+                                            <label for="ac_salutation_01" class="custom-radio__label"><span
+                                                    class="custom-radio__graphic"></span><span
+                                                    class="custom-radio__txt">先生</span></label>
+                                        </div>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="ac_salutation_02" name="salute" value="02">
+                                            <label for="ac_salutation_02" class="custom-radio__label"><span
+                                                    class="custom-radio__graphic"></span><span
+                                                    class="custom-radio__txt">小姐</span></label>
+                                        </div>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="ac_salutation_03" name="salute" value="03">
+                                            <label for="ac_salutation_03" class="custom-radio__label"><span
+                                                    class="custom-radio__graphic"></span><span
+                                                    class="custom-radio__txt">女士</span></label>
+                                        </div>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="ac_salutation_04" name="salute" value="04">
+                                            <label for="ac_salutation_04" class="custom-radio__label"><span
+                                                    class="custom-radio__graphic"></span><span
+                                                    class="custom-radio__txt">太太</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>姓氏</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <input type="text" id="ac_familyName" name="familyName" value=""
+                                                class="form-check-empty form-check-name"
+                                                data-err-msg="err-reg-last-name" placeholder="须与身份证明文件相同" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>名字</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <input type="text" id="ac_firstName" name="firstName"
+                                                class="form-check-empty form-check-name"
+                                                data-err-msg="err-reg-first-name" placeholder="须与身份证明文件相同" value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期 (月/日):</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field field--radio field--1-1">
+                                    <div class="field__holder date-fields">
+                                        <div class="field-item field-item--1-2">
+                                            <div class="custom-select date-fields__month">
+                                                <select name="birth_month">
+                                                    <option value="" class="option-default">月</option>
+                                                    <option value="01">1</option>
+                                                    <option value="02">2</option>
+                                                    <option value="03">3</option>
+                                                    <option value="04">4</option>
+                                                    <option value="05">5</option>
+                                                    <option value="06">6</option>
+                                                    <option value="07">7</option>
+                                                    <option value="08">8</option>
+                                                    <option value="09">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-item field-item--1-2">
+                                            <div class="custom-select date-fields__day">
+                                                <select name="birth_day">
+                                                    <option value="" class="option-default">日</option>
+                                                    <option value="01">1</option>
+                                                    <option value="02">2</option>
+                                                    <option value="03">3</option>
+                                                    <option value="04">4</option>
+                                                    <option value="05">5</option>
+                                                    <option value="06">6</option>
+                                                    <option value="07">7</option>
+                                                    <option value="08">8</option>
+                                                    <option value="09">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="field-grid__empty-cell">&nbsp;</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <div class="custom-checkbox form-check-age">
+                                            <input id="underAge" name="underAge" value="Y" type="checkbox" />
+                                            <label for="underAge"><strong>如阁下未满18岁，请於方格内填上✔号</strong></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>居住地区</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <div class="custom-select form-check-empty"
+                                                data-err-msg="err-reg-residential-region">
+                                                <select name="residenceCountry">
+                                                    <option value="CN">中国大陆</option>
+                                                    <option value="HK">香港地区</option>
+                                                    <option value="MO">澳门地区</option>
+                                                    <option value="TW">台湾地区</option>
+                                                    <option value="XX">其他</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <div class="field-item field-item--phone-code field-item--with-country-code">
+                                            <div class="custom-select form-check-empty select-phone-code">
+                                                <select name="mobileCountryCode">
+                                                    <option value="">区域代码</option>
+                                                    <option value="86" selected>+86</option>
+                                                    <option value="852">+852</option>
+                                                    <option value="853">+853</option>
+                                                    <option value="886">+886</option>
+                                                    <option value="1">+1</option>
+                                                    <option value="1">+1</option>
+                                                    <option value="1242">+1242</option>
+                                                    <option value="1246">+1246</option>
+                                                    <option value="1264">+1264</option>
+                                                    <option value="1268">+1268</option>
+                                                    <option value="1345">+1345</option>
+                                                    <option value="1441">+1441</option>
+                                                    <option value="1664">+1664</option>
+                                                    <option value="1670">+1670</option>
+                                                    <option value="1671">+1671</option>
+                                                    <option value="1758">+1758</option>
+                                                    <option value="1784">+1784</option>
+                                                    <option value="1787">+1787</option>
+                                                    <option value="1809">+1809</option>
+                                                    <option value="1809">+1809</option>
+                                                    <option value="1876">+1876</option>
+                                                    <option value="1890">+1890</option>
+                                                    <option value="20">+20</option>
+                                                    <option value="212">+212</option>
+                                                    <option value="213">+213</option>
+                                                    <option value="216">+216</option>
+                                                    <option value="218">+218</option>
+                                                    <option value="220">+220</option>
+                                                    <option value="221">+221</option>
+                                                    <option value="223">+223</option>
+                                                    <option value="224">+224</option>
+                                                    <option value="225">+225</option>
+                                                    <option value="226">+226</option>
+                                                    <option value="227">+227</option>
+                                                    <option value="228">+228</option>
+                                                    <option value="229">+229</option>
+                                                    <option value="230">+230</option>
+                                                    <option value="231">+231</option>
+                                                    <option value="232">+232</option>
+                                                    <option value="233">+233</option>
+                                                    <option value="233">+233</option>
+                                                    <option value="234">+234</option>
+                                                    <option value="235">+235</option>
+                                                    <option value="236">+236</option>
+                                                    <option value="237">+237</option>
+                                                    <option value="239">+239</option>
+                                                    <option value="241">+241</option>
+                                                    <option value="242">+242</option>
+                                                    <option value="243">+243</option>
+                                                    <option value="244">+244</option>
+                                                    <option value="247">+247</option>
+                                                    <option value="248">+248</option>
+                                                    <option value="249">+249</option>
+                                                    <option value="250">+250</option>
+                                                    <option value="251">+251</option>
+                                                    <option value="252">+252</option>
+                                                    <option value="253">+253</option>
+                                                    <option value="254">+254</option>
+                                                    <option value="255">+255</option>
+                                                    <option value="256">+256</option>
+                                                    <option value="257">+257</option>
+                                                    <option value="258">+258</option>
+                                                    <option value="260">+260</option>
+                                                    <option value="261">+261</option>
+                                                    <option value="262">+262</option>
+                                                    <option value="263">+263</option>
+                                                    <option value="264">+264</option>
+                                                    <option value="265">+265</option>
+                                                    <option value="266">+266</option>
+                                                    <option value="267">+267</option>
+                                                    <option value="268">+268</option>
+                                                    <option value="269">+269</option>
+                                                    <option value="27">+27</option>
+                                                    <option value="30">+30</option>
+                                                    <option value="31">+31</option>
+                                                    <option value="32">+32</option>
+                                                    <option value="33">+33</option>
+                                                    <option value="331">+331</option>
+                                                    <option value="34">+34</option>
+                                                    <option value="350">+350</option>
+                                                    <option value="351">+351</option>
+                                                    <option value="352">+352</option>
+                                                    <option value="353">+353</option>
+                                                    <option value="354">+354</option>
+                                                    <option value="355">+355</option>
+                                                    <option value="356">+356</option>
+                                                    <option value="357">+357</option>
+                                                    <option value="358">+358</option>
+                                                    <option value="359">+359</option>
+                                                    <option value="36">+36</option>
+                                                    <option value="370">+370</option>
+                                                    <option value="371">+371</option>
+                                                    <option value="372">+372</option>
+                                                    <option value="373">+373</option>
+                                                    <option value="374">+374</option>
+                                                    <option value="375">+375</option>
+                                                    <option value="376">+376</option>
+                                                    <option value="377">+377</option>
+                                                    <option value="378">+378</option>
+                                                    <option value="380">+380</option>
+                                                    <option value="381">+381</option>
+                                                    <option value="386">+386</option>
+                                                    <option value="39">+39</option>
+                                                    <option value="40">+40</option>
+                                                    <option value="41">+41</option>
+                                                    <option value="420">+420</option>
+                                                    <option value="421">+421</option>
+                                                    <option value="423">+423</option>
+                                                    <option value="43">+43</option>
+                                                    <option value="44">+44</option>
+                                                    <option value="45">+45</option>
+                                                    <option value="46">+46</option>
+                                                    <option value="47">+47</option>
+                                                    <option value="48">+48</option>
+                                                    <option value="49">+49</option>
+                                                    <option value="501">+501</option>
+                                                    <option value="502">+502</option>
+                                                    <option value="503">+503</option>
+                                                    <option value="504">+504</option>
+                                                    <option value="505">+505</option>
+                                                    <option value="506">+506</option>
+                                                    <option value="507">+507</option>
+                                                    <option value="509">+509</option>
+                                                    <option value="51">+51</option>
+                                                    <option value="52">+52</option>
+                                                    <option value="53">+53</option>
+                                                    <option value="54">+54</option>
+                                                    <option value="55">+55</option>
+                                                    <option value="56">+56</option>
+                                                    <option value="57">+57</option>
+                                                    <option value="58">+58</option>
+                                                    <option value="591">+591</option>
+                                                    <option value="592">+592</option>
+                                                    <option value="593">+593</option>
+                                                    <option value="594">+594</option>
+                                                    <option value="595">+595</option>
+                                                    <option value="596">+596</option>
+                                                    <option value="597">+597</option>
+                                                    <option value="598">+598</option>
+                                                    <option value="599">+599</option>
+                                                    <option value="60">+60</option>
+                                                    <option value="61">+61</option>
+                                                    <option value="62">+62</option>
+                                                    <option value="63">+63</option>
+                                                    <option value="64">+64</option>
+                                                    <option value="65">+65</option>
+                                                    <option value="66">+66</option>
+                                                    <option value="673">+673</option>
+                                                    <option value="674">+674</option>
+                                                    <option value="675">+675</option>
+                                                    <option value="676">+676</option>
+                                                    <option value="677">+677</option>
+                                                    <option value="678">+678</option>
+                                                    <option value="679">+679</option>
+                                                    <option value="682">+682</option>
+                                                    <option value="684">+684</option>
+                                                    <option value="685">+685</option>
+                                                    <option value="686">+686</option>
+                                                    <option value="689">+689</option>
+                                                    <option value="7">+7</option>
+                                                    <option value="7">+7</option>
+                                                    <option value="81">+81</option>
+                                                    <option value="82">+82</option>
+                                                    <option value="84">+84</option>
+                                                    <option value="850">+850</option>
+                                                    <option value="855">+855</option>
+                                                    <option value="856">+856</option>
+                                                    <option value="880">+880</option>
+                                                    <option value="90">+90</option>
+                                                    <option value="91">+91</option>
+                                                    <option value="92">+92</option>
+                                                    <option value="93">+93</option>
+                                                    <option value="94">+94</option>
+                                                    <option value="95">+95</option>
+                                                    <option value="960">+960</option>
+                                                    <option value="961">+961</option>
+                                                    <option value="962">+962</option>
+                                                    <option value="963">+963</option>
+                                                    <option value="964">+964</option>
+                                                    <option value="965">+965</option>
+                                                    <option value="966">+966</option>
+                                                    <option value="967">+967</option>
+                                                    <option value="968">+968</option>
+                                                    <option value="971">+971</option>
+                                                    <option value="972">+972</option>
+                                                    <option value="973">+973</option>
+                                                    <option value="974">+974</option>
+                                                    <option value="976">+976</option>
+                                                    <option value="977">+977</option>
+                                                    <option value="98">+98</option>
+                                                    <option value="992">+992</option>
+                                                    <option value="993">+993</option>
+                                                    <option value="994">+994</option>
+                                                    <option value="995">+995</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field-item field-item--phone-num">
+                                            <input type="text" id="ac_mobileNumber" name="mobileNumber" data-orig=""
+                                                class="form-check-empty form-check-tel " maxlength="11" value=""
+                                                data-err-msg="err-reg-mobile" />
+                                            <a href="#" class="helper-info">
+                                                <span>我们将向您发送验证码。</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电邮地址</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field field-instant-check">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <input type="text" id="email" name="email"
+                                                class="form-check-empty form-check-email " value=""
+                                                data-err-msg="err-reg-email" />
+                                            <div class="field-instant-check__result"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认电邮地址</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field field-instant-check">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <input type="text" id="email-confirm" name="email_confirm"
+                                                class="form-check-empty form-check-email " value=""
+                                                data-confirm-target="#email" />
+                                            <div class="field-instant-check__result"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field-grid__empty-cell">&nbsp;</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <div class="custom-checkbox">
+                                            <input id="optOutEmail" name="optOutEmail" value="Y" type="checkbox" />
+                                            <label for="optOutEmail"><strong>我没有电子邮件</strong></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>输入密码</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field field-instant-check">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <input type="password" id="ac_password" name="password"
+                                                class="form-check-empty form-check-pw" placeholder="6 - 15个字符"
+                                                data-err-msg="err-reg-pw" />
+                                            <div class="field-instant-check__result"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认密码</td>
+                        <td>
+                            <div class="field-row">
+                                <div class="field field-instant-check">
+                                    <div class="field__holder">
+                                        <div class="field-item">
+                                            <input type="password" id="ac_password_confirm" name="password_confirm"
+                                                class="form-check-empty form-check-pw-confirm" placeholder="6 - 15个字符"
+                                                data-confirm-target="#ac_password" />
+                                            <div class="field-instant-check__result"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field-grid__empty-cell">&nbsp;</td>
+                        <td>
+                            <div class="field-row m1-tnc">
+                                <div class="field">
+                                    <div class="field__holder">
+                                        <p class="desc">递交此表格代表阁下同意周生生之友之 <a target="_blank" class="content-link"
+                                                href="https://cn.chowsangsang.com/tnc-starshopper#tncSet2">条款及细则</a>。
+                                        </p>
+                                        <div class="custom-checkbox--inline custom-checkbox form-check-tnc">
+                                            <input id="ac_tnc" name="tnc" value="Y" type="checkbox" />
+                                            <label
+                                                for="ac_tnc"></label>阁下确认已阅读并同意周生生珠宝金行有限公司及(只适用於澳门地区的资料处理)点睛品珠宝有限公司或相关集团成员(统称为「我们」)的<a
+                                                target="_blank" class="content-link"
+                                                href="http://cn.chowsangsang.com/sc/Others/Privacy-Policy">私隐政策</a>及<a
+                                                target="_blank" class="content-link"
+                                                href="http://cn.chowsangsang.com/cookie-policy">Cookie政策</a>(以下另外指订的事项除外)。
+                                        </div>
+                                        <p class="desc desc--s">我们拟使用阁下以上之个人资料作直接促销及自动化处理(包按个人概况汇编)，以为阁下提供<a
+                                                target="_blank" class="content-link"
+                                                href="http://cn.chowsangsang.com/sc/Others/Privacy-Policy">私隐政策</a>所列出之促销标的之最新消息丶优惠丶活动及推广礼遇等资讯。我们不得将阁下的个人资料用於直接促销，除非我们已得到阁下相关的同意。
+                                        </p>
+                                        <p class="desc desc--s" style="display:inline;">
+                                            阁下同意我们透过以下通讯方式使用阁下的个人资料于拟作出的直接促销、推广服务及通讯之用：电话、短讯及电邮。阁下日后可以联络我们更改使用阁下个人资料方式的意愿。
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="field-grid__banner-cell">
+                            <a href="#" class="btn-popup" data-popup-target="#popup-reg-banner">
+                                <img class="ver-dt"
+                                    src="https://reward.chowsangsang.com/cn/images/registration/img-reg-banner-sc.jpg"
+                                    alt="" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <div class="btn-row btn-row--al-center">
+                    <a class="btn btn-submit" href="login.php"><span>提交</span></a>
+                </div>
+                <input name="memberMovement" type="hidden" value="R">
+                <input id="emailState" name="emailState" type="hidden" value="">
+                <input id="service" name="service" type="hidden"
+                    value="https://cn.chowsangsang.com/script/cas/login.php">
+
+                <input id="type" name="type" type="hidden" value="">
+
+
+                <input id="lang" name="lang" type="hidden" value="lang3">
+                <input id="eshop" name="eshop" type="hidden" value="">
+                <input id="surv_id" name="surv_id" type="hidden" value="">
+
+
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="item-footer">
+                <div>
+                    <ul>
+                        <li>联系我们</li>
+                        <li>分店位置</li>
+                        <li>网站地图</li>
+                        <li>周生生集团</li>
+                        <li>愿景及品牌理念</li>
+                        <li>珠宝品质与工艺</li>
+                        <li>加入我们</li>
+                        <li>周生生贵金属化验所</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>服务</li>
+                        <li>货品配送</li>
+                        <li>退货及换货</li>
+                        <li>帮助</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>关注我们</li>
+                        <li>F 微博 ins</li>
+                        <li>顾客服务(+86)400 830 1878</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footericon">
+            <span>© 2021周生生集团国际有限公司</span>
+            <div>
+                <span>隐私政策&nbsp;&nbsp;</span>
+                <span>Cookie政策&nbsp;&nbsp;</span>
+                <span>条款及细则&nbsp;&nbsp;</span>
+                <span>粤ICP备12061196号&nbsp;&nbsp;</span>
+                <span><img src="img/footer_icon.png" alt="">粤公安网备44010602008010号</span>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>

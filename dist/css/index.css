@@ -1,0 +1,56 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: transparent; }
+
+.banner {
+  width: 100%; }
+
+.banner2 {
+  width: 100%; }
+
+.main-2 .tongxin {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 181px;
+  text-align: center;
+  overflow: hidden; }
+  .main-2 .tongxin .tongxinh3 {
+    margin-top: 70px;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, Georgia, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+    color: #3d3d3d; }
+  .main-2 .tongxin p {
+    font-size: 13px;
+    font-family: Verdana, "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+    color: #666666;
+    margin-top: 10px; }
+
+.main-3 {
+  margin: 40px 0 80px 0 !important;
+  width: 100% !important;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-color: #f9f9f9; }
+  .main-3 .one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .main-3 .one .one-p {
+      font-size: 13px !important;
+      font-family: Verdana, "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+      color: #3f3f3f;
+      padding: 0px 10px;
+      text-align: center; }
+    .main-3 .one .one-p2 {
+      font-size: 30px;
+      font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", "å¾®è»Ÿæ­£é»‘é«”", sans-serif;
+      color: #424242;
+      height: 89px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }

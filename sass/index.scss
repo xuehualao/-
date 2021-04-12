@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:transparent ;
+}
+.banner{
+    width: 100%;
+}
+.banner2{
+    width: 100%;
+}
+.main-2{
+    .tongxin{
+        background-color: rgb(249, 249, 249);
+        width: 100%;
+        height: 181px;
+        text-align: center;
+        // margin-bottom: 20px;
+        // margin-top:70px;
+        overflow: hidden;
+        .tongxinh3{
+            margin-top:70px;
+            font-size: 30px;
+            font-family: "Times New Roman", Times, Georgia, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+            color: rgb(61, 61, 61);
+        }
+        p{
+            font-size: 13px;
+            font-family: Verdana, "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+            color: rgb(102, 102, 102);
+            margin-top: 10px;
+        }
+    }
+}
+.main-3{
+    margin:40px 0 80px 0 !important;
+    width: 100% !important;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background-color: rgb(249, 249, 249);
+    .one{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .one-p{
+            font-size: 13px !important;
+            font-family: Verdana, "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+            color: rgb(63, 63, 63);
+            padding: 0px 10px;
+            text-align: center;
+        }
+        .one-p2{
+            font-size: 30px;
+            font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", "å¾®è»Ÿæ­£é»‘é«”", sans-serif;
+            color: #424242;
+            height: 89px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

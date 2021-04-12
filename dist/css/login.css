@@ -1,0 +1,155 @@
+@charset "UTF-8";
+main {
+  width: 100%;
+  margin-top: 30px; }
+  main .main-one {
+    width: 1170px;
+    height: 633px;
+    padding: 60px 58.5px;
+    margin: 0 auto; }
+    main .main-one img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      width: 266px; }
+  main .main-two {
+    position: relative;
+    width: 1053;
+    height: 433px;
+    padding: 45px; }
+    main .main-two h1 {
+      font-weight: normal;
+      margin-bottom: 10px;
+      position: relative;
+      font-size: 28px; }
+    main .main-two .main-two-span {
+      display: block;
+      float: left;
+      position: absolute;
+      top: 52px;
+      left: 935px; }
+    main .main-two hr {
+      height: 4px;
+      background: #020202;
+      margin-top: 0;
+      margin-bottom: 0; }
+    main .main-two .login {
+      width: 963px;
+      height: 274px;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between; }
+      main .main-two .login .login-left {
+        width: 417px;
+        height: 274px;
+        overflow: hidden;
+        position: relative; }
+        main .main-two .login .login-left .phone {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 417px;
+          height: 89px;
+          margin-bottom: 10px; }
+          main .main-two .login .login-left .phone .phone-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; }
+            main .main-two .login .login-left .phone .phone-title p {
+              margin: 0; }
+          main .main-two .login .login-left .phone i {
+            font-style: normal; }
+          main .main-two .login .login-left .phone input {
+            display: block; }
+          main .main-two .login .login-left .phone .field_holder {
+            position: absolute;
+            bottom: 203px;
+            z-index: 1;
+            width: 118px; }
+            main .main-two .login .login-left .phone .field_holder select {
+              border: 1px solid #000; }
+          main .main-two .login .login-left .phone .phone-value {
+            position: absolute;
+            left: 117px;
+            top: 31px;
+            width: 300px; }
+          main .main-two .login .login-left .phone .phone-tips {
+            color: #bc937c;
+            position: absolute;
+            top: 70px;
+            left: 277px; }
+        main .main-two .login .login-left .password {
+          width: 100px;
+          height: 61px;
+          position: relative;
+          margin-bottom: 20px; }
+          main .main-two .login .login-left .password p {
+            margin-bottom: 10px; }
+          main .main-two .login .login-left .password input {
+            width: 416px; }
+          main .main-two .login .login-left .password a {
+            position: absolute;
+            bottom: -44px;
+            right: -309px; }
+        main .main-two .login .login-left .dengru {
+          margin-top: 35px;
+          width: 416px;
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 12px;
+          border: 1px solid #020202;
+          color: #020202;
+          background: #4a5c68;
+          border-color: #4a5c68;
+          color: #FFF;
+          text-align: center; }
+      main .main-two .login .login-center {
+        width: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 215px;
+        left: 500px; }
+        main .main-two .login .login-center:before {
+          content: "";
+          display: inline-block;
+          height: 275px;
+          width: 1px;
+          position: absolute;
+          left: 27px;
+          background-color: #aaa;
+          z-index: 0; }
+        main .main-two .login .login-center:after {
+          content: "或";
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 56px;
+          height: 56px;
+          border-radius: 32px;
+          background-color: #bc937c;
+          color: #FFF;
+          z-index: 1;
+          border: 8px solid #f8f8f9; }
+      main .main-two .login .login-right {
+        display: inline-flex;
+        justify-content: center; }
+        main .main-two .login .login-right a {
+          background-color: #03d669;
+          border-color: #03d669;
+          color: #FFF;
+          padding: 0;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          height: 44px;
+          width: 417px;
+          margin-top: 137px; }
+          main .main-two .login .login-right a img {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px; }
+          main .main-two .login .login-right a span {
+            margin-right: 140px; }
