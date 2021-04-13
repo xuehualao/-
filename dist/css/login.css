@@ -153,3 +153,11 @@ main {
             margin-right: 10px; }
           main .main-two .login .login-right a span {
             margin-right: 140px; }
+
+.siwper-row {
+  padding: 0 60px; }
+  .siwper-row .s1 {
+    height: 357px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }

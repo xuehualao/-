@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/regist.css">
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/style-cn.css">
+    <script src="./js/jQuery copy.js"></script>
 </head>
 
 <body>
@@ -53,9 +54,10 @@
                     <!-- rightsomething -->
                     <div class="item">
                         <div class="not-log">
-                            <a href="">登陆</a>
+                            <a href="login.html" target="_blank">登陆</a>
                             /
-                            <a href="">注册</a>
+                            <a href="regist.html" target="_blank">注册</a>
+
                             <div class="iconwrap">
                                 <span class="iconfont icon-mianxing-08"></span>
                                 <div class="xinyuan">
@@ -154,7 +156,7 @@
                                 <div class="field">
                                     <div class="field__holder">
                                         <div class="field-item">
-                                            <input type="text" id="ac_familyName" name="familyName" value=""
+                                            <input type="text" id="username" name="familyName" value=""
                                                 class="form-check-empty form-check-name"
                                                 data-err-msg="err-reg-last-name" placeholder="须与身份证明文件相同" />
                                         </div>
@@ -548,7 +550,7 @@
                                     <div class="field__holder">
                                         <div class="custom-checkbox">
                                             <input id="optOutEmail" name="optOutEmail" value="Y" type="checkbox" />
-                                            <label for="optOutEmail"><strong>我没有电子邮件</strong></label>
+                                            <label type="radio"><strong>我没有电子邮件</strong></label>
                                         </div>
                                     </div>
                                 </div>
@@ -563,7 +565,7 @@
                                 <div class="field field-instant-check">
                                     <div class="field__holder">
                                         <div class="field-item">
-                                            <input type="password" id="ac_password" name="password"
+                                            <input type="password" id="password" name="password"
                                                 class="form-check-empty form-check-pw" placeholder="6 - 15个字符"
                                                 data-err-msg="err-reg-pw" />
                                             <div class="field-instant-check__result"></div>
@@ -601,7 +603,7 @@
                                         </p>
                                         <div class="custom-checkbox--inline custom-checkbox form-check-tnc">
                                             <input id="ac_tnc" name="tnc" value="Y" type="checkbox" />
-                                            <label
+                                            <label type="radio"
                                                 for="ac_tnc"></label>阁下确认已阅读并同意周生生珠宝金行有限公司及(只适用於澳门地区的资料处理)点睛品珠宝有限公司或相关集团成员(统称为「我们」)的<a
                                                 target="_blank" class="content-link"
                                                 href="http://cn.chowsangsang.com/sc/Others/Privacy-Policy">私隐政策</a>及<a
@@ -634,13 +636,13 @@
                 </table>
                 <br />
                 <br />
-                <div class="btn-row btn-row--al-center">
-                    <a class="btn btn-submit" href="login.php"><span>提交</span></a>
+                <div class="btn-row btn-row--al-center" id="Btn">
+                    <a><span>提交</span></a>
                 </div>
-                <input name="memberMovement" type="hidden" value="R">
+                <!-- <input name="memberMovement" type="hidden" value="R">
                 <input id="emailState" name="emailState" type="hidden" value="">
                 <input id="service" name="service" type="hidden"
-                    value="https://cn.chowsangsang.com/script/cas/login.php">
+                    value="https://cn.chowsangsang.com/script/cas/login.php"> -->
 
                 <input id="type" name="type" type="hidden" value="">
 
@@ -698,6 +700,28 @@
         </div>
 
     </footer>
+    <script>
+        $("#Btn").on("click", function () {
+            $.ajax({
+                type: "get",
+                url: `http://jx.xuzhixiang.top/ap/api/reg.php?username=${$("#username").val()}&password=${$("#password").val()}`,
+                success: function (result) {
+                    if (result.code == 1) {
+                        alert("注册成功,请重新登陆")
+                        window.location.replace("/login.html");
+
+                    } else {
+                        alert(result.msg)
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+
+        })
+
+    </script>
 </body>
 
 </html>

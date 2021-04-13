@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/style-cn.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="./js/cookie.js"></script>
+    <script src="./js/jQuery copy.js"></script>
 </head>
 
 <body>
@@ -54,9 +56,10 @@
                     <!-- rightsomething -->
                     <div class="item">
                         <div class="not-log">
-                            <a href="">登陆</a>
+                            <a href="login.html" target="_blank">登陆</a>
                             /
-                            <a href="">注册</a>
+                            <a href="regist.html" target="_blank">注册</a>
+
                             <div class="iconwrap">
                                 <span class="iconfont icon-mianxing-08"></span>
                                 <div class="xinyuan">
@@ -311,16 +314,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="text" class="phone-value">
+                                <input type="text" id="username" class="phone-value">
                                 <span class="phone-tips">手机号码长度为11码</span>
                             </div>
                         </div>
                         <div class="password">
                             <p>密码</p>
-                            <input type="password" name="" id="">
+                            <input type="password" id="password" name="" id="">
                             <a href="">忘记密码?</a>
                         </div>
-                        <a class="dengru" href="">登入</a>
+                        <div id="btn">
+                            <a class="dengru" href="JavaScript:;">登入</a>
+                        </div>
                     </div>
                     <div class="login-center"></div>
                     <div class="login-right">
@@ -377,6 +382,29 @@
         </div>
 
     </footer>
-</body>
+    <script>
+        $("#btn").on("click", function () {
+            $.ajax({
+                type: "get",
+                url: `http://jx.xuzhixiang.top/ap/api/login.php?username=${$("#username").val()}&password=${$("#password").val()}`,
+                success: function (result) {
+                    if (result.code == 1) {
+                        alert("登陆成功,点击确定跳转到首页")
+                        var uid = setCookie("uid", result.data.id)
+                        var token = setCookie("token", result.data.token)
+                        var username = setCookie("username", result.data.username)
+                        window.location.replace("/index.html");
+                    } else {
+                        alert(result.msg)
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+
+        })
+
+    </script>
 
 </html>

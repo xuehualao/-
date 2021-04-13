@@ -1,0 +1,1 @@
+$(#username).ready(function(){$("#b01").click(function(){htmlobj=$.ajax({url:"/jquery/test1.txt",async:!1}),$("#myDiv").html(htmlobj.responseText)})});

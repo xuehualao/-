@@ -11,7 +11,29 @@
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/reset-index.css">
     <link rel="stylesheet" href="css/style-cn.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/indexlist.js"></script>
+    <style>
+        .swiper-container {
+            width: 80vw;
+            height: 300px;
+        }
 
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,9 +77,11 @@
                     <!-- rightsomething -->
                     <div class="item">
                         <div class="not-log">
-                            <a href="">登陆</a>
-                            /
-                            <a href="">注册</a>
+                            <div class="logw">
+                                <a class="logw1" href="login.html" target="_blank">登陆</a>
+                                /
+                                <a class="logw2" href="regist.html" target="_blank">注册</a>
+                            </div>
                             <div class="iconwrap">
                                 <span class="iconfont icon-mianxing-08"></span>
                                 <div class="xinyuan">
@@ -168,9 +192,154 @@
             </div>
         </div>
     </div>
-    <div class="main-4">
-        <img src="img/banner_fccd_logo_v2.jpg" style="margin: 0 auto;" alt="">
+    <div class="main-5 hidden-xs">
+
+        <div class="bannerImg">
+            <img class="bannerimg" src="img/banner_fccd_logo_v2.jpg" alt="">
+        </div>
         <img src="img/banner_fccd_1450_v3.jpg" width="100%" height="100%" alt="">
+    </div>
+    <div class="visible-xs main-5phone">
+        <div class="bannerImg">
+            <img src="img/banner_fccd_logo_v2.jpg" alt="">
+        </div>
+        <img src="img/banner_fccd_768_v3.jpg" width="100%" height="100%" alt="">
+        <p>国风雅韵 意蕴新生</p>
+        <span class="blackbtn">探索更多</span>
+    </div>
+    <div class="visible-xs main-5phone">
+        <div class="bannerImg">
+            <img src="./img/banner_chineseGiftingCollection_logo.jpg" alt="">
+        </div>
+        <img src="img/banner_chineseWeddingCollection_1450_v2.jpg" width="100%" height="100%" alt="">
+        <p>珍贵的祝福，龙凤呈祥，成双成对</p>
+        <span class="blackbtn">探索更多</span>
+    </div>
+    <div class="main-5 hidden-xs">
+        <div class="bannerImg">
+            <img src="./img/banner_chineseGiftingCollection_logo.jpg" alt="">
+        </div>
+        <img src="img/banner_chineseWeddingCollection_1450_v2.jpg" alt="">
+    </div>
+    <div class="siwper">
+        <div class="siwper-title">
+            <h3>推介</h3>
+            <p>探索高级珠宝饰品，为您的魅力加分</p>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper sww">
+                <!-- 把每一张图片放上就好了 -->
+                <!--<div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/01.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/02.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/03.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/04.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/05.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/06.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/07.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                    </div>
+                </div>-->
+            </div>
+            <!-- 这是swiper底下的原点 -->
+            <div class="swiper-pagination"></div>
+            <!-- “下一个”按钮 -->
+            <div class="swiper-button-next"></div>
+            <!-- “上一个”按钮 -->
+            <div class="swiper-button-prev"></div>
+
+
+        </div>
+    </div>
+    <div class="section">
+        <h3>按类别浏览</h3>
+        <p>匠心独运的首饰，为您提供最优质精致的产品
+        </p>
+    </div>
+    <div class="prol container visible-md visible-lg hidden-sm hidden-xs">
+        <div class="pro col-md-3"">
+            <img src=" img/category_768_2_1.jpg" alt="">
+            <p>吊坠</p>
+        </div>
+        <div class="pro col-md-3">
+            <img src="img/category_768_2_2.jpg" alt="">
+            <p>戒指</p>
+        </div>
+        <div class="pro col-md-3">
+            <img src="img/category_768_2_3.jpg" alt="">
+            <p>耳环</p>
+        </div>
+        <div class="pro col-md-3">
+            <img src="img/category_768_2_4.jpg" alt="">
+            <p>手链</p>
+        </div>
+    </div>
+    <div class="prol  hidden-md visible-sm visible-xs">
+        <div class="container">
+            <div class="pro col-xs-6 phonepro">
+                <img src=" img/category_768_2_1.jpg" width="100%" height="100%" alt="">
+                <p>吊坠</p>
+            </div>
+            <div class="pro col-xs-6 phonepro">
+                <img src="img/category_768_2_2.jpg" width="100%" height="100%" alt="">
+                <p>戒指</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="pro col-xs-6 phonepro">
+                <img src="img/category_768_2_3.jpg" width="100%" height="100%" alt="">
+                <p>耳环</p>
+            </div>
+            <div class="pro col-xs-6 phonepro">
+                <img src="img/category_768_2_4.jpg" width="100%" height="100%" alt="">
+                <p>手链</p>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="container">
@@ -217,6 +386,29 @@
         </div>
 
     </footer>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,   // 当前展示的个数
+            spaceBetween: 30,   // 每个swiper-slide之间的距离
+            slidesPerGroup: 1,  // 步进数
+            loop: true,			// 是否循环
+            loopFillGroupWithBlank: true,  // 在最后一个是否展示前面的个数
+            pagination: {
+                el: '.swiper-pagination',  // 你原点的类名
+                clickable: true,           // 是否可以点击
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',  // 下一个按钮类名
+                prevEl: '.swiper-button-prev',  // 上一个按钮类名
+            },
+        });
+        if (getCookie("uid")) {
+            $(".logw").css("display", "none");
+            $(".xinyuan").css("left", "18px")
+            $(".yuan").css("left", "110px")
+
+        }
+    </script>
 </body>
 
 </html>

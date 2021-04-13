@@ -185,4 +185,12 @@ main{
                 }
             }
         }
-    
+    .siwper-row{
+        padding: 0 60px;
+        .s1{
+            height: 357px;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+        }
+    }
