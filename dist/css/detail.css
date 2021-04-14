@@ -1,0 +1,67 @@
+.share {
+  padding-top: 15px;
+  margin: 20px auto 30px auto;
+  line-height: 24px;
+  width: 100%; }
+  .share p {
+    margin-left: 60px; }
+
+main {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  main .col-img {
+    padding: 0 60px; }
+    main .col-img img {
+      height: 350px;
+      width: 350px;
+      display: block;
+      margin: 0 auto; }
+  main .col-ctn {
+    padding: 0 15px; }
+    main .col-ctn .protitle {
+      font-size: 25px;
+      font-weight: bold; }
+    main .col-ctn h4 {
+      margin: 15px 0;
+      font-size: 20px; }
+    main .col-ctn p {
+      color: #C69967;
+      font-size: 20px; }
+    main .col-ctn .promd {
+      background: transparent;
+      font-size: 11px;
+      padding: 10px 5px;
+      white-space: nowrap;
+      margin: 10px 0;
+      text-align: center; }
+    main .col-ctn .fackbtn {
+      border: 1px solid #454545;
+      color: #454545;
+      padding: 16px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      cursor: pointer; }
+    main .col-ctn .joincart {
+      background: #111;
+      color: white;
+      padding: 16px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      cursor: pointer; }
+    main .col-ctn .round {
+      background: #F5F5F5;
+      color: black;
+      padding: 16px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      cursor: pointer; }
+    main .col-ctn .p {
+      text-align: center;
+      color: #7F7F7F; }

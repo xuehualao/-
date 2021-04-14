@@ -3,7 +3,7 @@ header {
   width: 100%;
   font-family: "Times New Roman", Times, Georgia, "Microsoft JhengHei", 微軟正黑體, serif;
   position: absolute;
-  z-index: 999; }
+  z-index: 1; }
   header .navTopWrap {
     display: relative;
     width: 100%;
@@ -180,6 +180,65 @@ header {
     .navBottom ul li .xia {
       color: #020202;
       font-size: 5px; }
+
+.navBottom2 {
+  width: 100%;
+  display: none;
+  text-align: center;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 999; }
+  .navBottom2 img {
+    margin: 0 auto;
+    width: 120px;
+    height: 30px; }
+  .navBottom2 ul {
+    margin: 0 auto; }
+  .navBottom2 .rolex-tudor {
+    position: absolute;
+    top: 20px; }
+    .navBottom2 .rolex-tudor .tudor {
+      width: 76px;
+      background-image: url(/img/tudor_120x60_en.png);
+      height: 39px;
+      background-size: cover;
+      padding: 0px;
+      float: left;
+      border: 0px;
+      margin-right: 5px; }
+    .navBottom2 .rolex-tudor .rolex {
+      width: 79px;
+      background-image: url(/img/Retailer_plaque_120x60-en.jpg);
+      height: 39px;
+      background-size: cover;
+      padding: 0px;
+      float: left;
+      border: 0px; }
+  .navBottom2 .bright-sh {
+    height: 33px;
+    width: 78px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between; }
+    .navBottom2 .bright-sh .iconwrap p {
+      margin: 0 !important;
+      position: absolute;
+      top: 0; }
+    .navBottom2 .bright-sh .iconwrap1 {
+      position: fixed;
+      z-index: 100;
+      font-size: 17px; }
+      .navBottom2 .bright-sh .iconwrap1 .icon-mianxing-08 {
+        font-size: 25px; }
+    .navBottom2 .bright-sh .iconwrap2 {
+      position: fixed;
+      z-index: 100;
+      right: 40px; }
+      .navBottom2 .bright-sh .iconwrap2 .icon-gouwudai {
+        font-size: 25px; }
 
 aside {
   width: 100%;

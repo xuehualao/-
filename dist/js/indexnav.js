@@ -1,0 +1,1 @@
+$(function(){$(function(){$(window).scroll(function(){120<$(window).scrollTop()?$(".navBottom2").show():$(".navBottom2").hide()})})});

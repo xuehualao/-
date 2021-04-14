@@ -1,6 +1,7 @@
+console.log(cookie);
 $.ajax({
     type: "get",
-    url: `http://jx.xuzhixiang.top/ap/api/productlist.php?${"uid=51139"}`,
+    url: `http://jx.xuzhixiang.top/ap/api/detail.php?id=${cookie}`,
     success: function (result) {
         localStorage.setItem("productData", JSON.stringify(result.data));
         var productData = JSON.parse(localStorage.getItem("productData"));

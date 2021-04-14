@@ -1,4 +1,4 @@
-$.ajax({type:"get",url:"http://jx.xuzhixiang.top/ap/api/productlist.php?uid=51139",success:function(e){localStorage.setItem("productData",JSON.stringify(e.data));e=JSON.parse(localStorage.getItem("productData"));let i="";e.forEach(e=>{i+=`
+console.log(cookie),$.ajax({type:"get",url:`http://jx.xuzhixiang.top/ap/api/detail.php?id=${cookie}`,success:function(e){localStorage.setItem("productData",JSON.stringify(e.data));e=JSON.parse(localStorage.getItem("productData"));let i="";e.forEach(e=>{i+=`
             <div data-id=${e.pid} class="s1 swiper-slide">
             <img src="${e.pimg}" alt="">
             <p>Charme</p>

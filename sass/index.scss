@@ -101,6 +101,14 @@ body{
 .siwper{
     width: 100%;
     margin-bottom:80px ;
+    z-index: -1;
+    .s1{
+        z-index: -1;
+        img{
+            cursor: pointer;
+
+        }
+    }
     .siwper-title{
         h3{
             font-size: 30px;

@@ -5,4 +5,4 @@ $.ajax({type:"get",url:"http://jx.xuzhixiang.top/ap/api/productlist.php?uid=5113
             <span>${e.pname}</span>
             <i>$${e.pprice}</i>
             </div>
-            `}),$("#sww").html(i),clicklist();new Swiper(".swiper-container",{slidesPerView:4,spaceBetween:30,slidesPerGroup:1,loop:!0,loopFillGroupWithBlank:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});getCookie("uid")&&($(".logw").css("display","none"),$(".xinyuan").css("left","18px"),$(".yuan").css("left","110px"))}});
+            `}),$("#sww").html(i);new Swiper(".swiper-container",{slidesPerView:4,spaceBetween:30,slidesPerGroup:1,loop:!0,loopFillGroupWithBlank:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});getCookie("uid")&&($(".logw").css("display","none"),$(".xinyuan").css("left","18px"),$(".yuan").css("left","110px"))}});

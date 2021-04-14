@@ -85,7 +85,12 @@ body {
 
 .siwper {
   width: 100%;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  z-index: -1; }
+  .siwper .s1 {
+    z-index: -1; }
+    .siwper .s1 img {
+      cursor: pointer; }
   .siwper .siwper-title {
     padding-top: 70px;
     text-align: center; }

@@ -241,6 +241,85 @@ header{
             }
             
          }
+    .navBottom2{
+            display: none;
+            width: 100%;
+            text-align: center;
+            background-color: #fff !important;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            // left: 18%;
+            img{
+                margin: 0 auto;
+                width: 120px;
+                height: 30px;
+            }
+            ul{
+                margin: 0 auto !important;
+            }
+            .rolex-tudor{
+                position: absolute;
+                top:20px;
+                .tudor{
+                    width: 76px;
+                    background-image: url(/img/tudor_120x60_en.png);
+                    height: 39px;
+                    background-size: cover;
+                    padding: 0px;
+                    float: left;
+                    border: 0px;
+                    margin-right: 5px;
+                }
+                .rolex{
+                    width: 79px;
+                    background-image: url(/img/Retailer_plaque_120x60-en.jpg);
+                    height: 39px;
+                    background-size: cover;
+                    padding: 0px;
+                    float: left;
+                    border: 0px;
+                }           
+            }
+            .bright-sh{
+                height: 33px;
+                width:78px;
+                position: fixed;
+                top:20px;
+                right:30px;
+                display: flex;
+                justify-content:space-between;
+                .iconwrap{
+                    p{
+                        margin: 0 !important;
+                        position:absolute;
+                        top:0;
+                    }
+                }
+                .iconwrap1{
+                    position: fixed;
+                    // top: 34px;
+                    z-index: 100;
+                    // right: 60px;
+                    font-size: 17px;
+                    .icon-mianxing-08{
+                        font-size: 25px;
+                        }
+                }
+                .iconwrap2{
+                    position: fixed;
+                    // top: 34px;
+                    z-index: 100;
+                    right: 40px;
+                    .icon-gouwudai{
+                    font-size: 25px;
+                    }
+    
+                }
+                
+            }
+        }  
+    
   
     
 aside{

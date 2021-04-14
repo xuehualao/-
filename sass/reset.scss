@@ -228,7 +228,133 @@ header{
             }
         }
     }
-    
+    .navBottom2{
+        width: 100%;
+        display: none;
+        text-align: center;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        // left: 18%;
+        img{
+            margin: 0 auto;
+            width: 120px;
+            height: 30px;
+        }
+        ul{
+            margin: 0 auto;
+        }
+        .rolex-tudor{
+            position: absolute;
+            top:20px;
+            .tudor{
+                width: 76px;
+                background-image: url(/img/tudor_120x60_en.png);
+                height: 39px;
+                background-size: cover;
+                padding: 0px;
+                float: left;
+                border: 0px;
+                margin-right: 5px;
+            }
+            .rolex{
+                width: 79px;
+                background-image: url(/img/Retailer_plaque_120x60-en.jpg);
+                height: 39px;
+                background-size: cover;
+                padding: 0px;
+                float: left;
+                border: 0px;
+            }           
+        }
+        .bright-sh{
+            height: 33px;
+            width:78px;
+            position: fixed;
+            top:20px;
+            right:30px;
+            display: flex;
+            justify-content:space-between;
+            .iconwrap{
+                p{
+                    margin: 0 !important;
+                    position:absolute;
+                    top:0;
+                }
+            }
+            .iconwrap1{
+                position: fixed;
+                // top: 34px;
+                z-index: 100;
+                // right: 60px;
+                font-size: 17px;
+                .icon-mianxing-08{
+                    font-size: 25px;
+                    }
+            }
+            .iconwrap2{
+                position: fixed;
+                // top: 34px;
+                z-index: 100;
+                right: 40px;
+                .icon-gouwudai{
+                font-size: 25px;
+                }
+
+            }
+            .cart{
+                z-index: 9999;
+                display: none;
+                padding: 10px;
+                position: absolute;
+                width: 354px;
+                top: 31px;
+                right:-16px ;
+                background-color: #fff;
+                box-shadow:0px 0px 20px 2px #C7C7C7;                    margin: 0;
+                padding: 10px;
+                
+                .jz{
+                    display: block;
+                    padding: 8px 16px;
+                    font-size: 14px;
+                    line-height: 1.42857143;
+                    border-radius: 0px;
+                    color:#fff;
+                    background-color: #000;
+                }
+                .cartlist{
+                    height: 95px;
+                    margin: 10px auto;
+                    display: flex;
+                    justify-content: space-between;
+                    .cartimg{
+                        height:95px;
+                        width: 95px;
+                    }
+                    .carttitle{
+                        height: 95px;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        text-align: left;
+                        p{
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
+                .zongji{
+                    margin: 10px auto !important;
+                }
+            }
+            
+
+        }
+    } 
 aside{
     width: 100%;
     position: relative;

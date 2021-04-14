@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/reset-index.css">
     <link rel="stylesheet" href="css/style-cn.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
-    <script src="./js/cookie.js"></script>
-    <script src="./js/jQuery.js"></script>
-    <script src="./js/indexlist.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/jQuery.js"></script>
+    <script src="js/swiper-bundle.min.js"> </script>
+    <script src="js/cookie.js"></script>
+    <script src="js/indexlist.js"></script>
+    <script src="js/indexnav.js"></script>
     <style>
         .swiper-container {
             width: 80vw;
@@ -92,7 +93,6 @@
                                 <span class="iconfont icon-gouwudai"></span>
                                 <div class="yuan">
                                     <p>0</p>
-
                                 </div>
                             </div>
                             <a href="">金价资讯</a>
@@ -115,6 +115,34 @@
                 <li>服务 <span class="iconfont icon-xia xia"></span></li>
             </ul>
         </div>
+
+        <div class="navBottom navBottom2">
+            <div class="rolex-tudor">
+                <a href="" class="tudor"></a>
+                <a href="" class="rolex"></a>
+            </div>
+            <img src="./img/logo-nav.png" alt="">
+            <ul>
+                <li>重点推介</li>
+                <li>珠宝 <span class="iconfont icon-xia xia"></span> </li>
+                <li>品牌系列 <span class="iconfont icon-xia xia"></span></li>
+                <li>婚嫁 <span class="iconfont icon-xia xia"></span></li>
+                <li>礼品 <span class="iconfont icon-xia xia"></span></li>
+                <li>MINTYGREEN</li>
+                <li>劳力士</li>
+                <li>周生生之友</li>
+                <li>服务 <span class="iconfont icon-xia xia"></span></li>
+            </ul>
+            <div class="right-sh bright-sh">
+                <div class="iconwrap1">
+                    <span class="iconfont icon-mianxing-08"></span>
+                </div>
+                <div class="iconwrap2">
+                    <span class="iconfont icon-gouwudai"></span>
+                </div>
+            </div>
+        </div>
+
     </header>
     <!-- global end -->
     <!-- shop start -->
@@ -227,64 +255,15 @@
             <p>探索高级珠宝饰品，为您的魅力加分</p>
         </div>
         <div class="swiper-container">
-            <div class="swiper-wrapper sww">
+            <div class="swiper-wrapper sww" id="sww">
                 <!-- 把每一张图片放上就好了 -->
-                <!--<div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/01.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/02.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/03.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/04.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/05.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/06.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="s1 swiper-slide">
-                        <img src="./img/07.jpg" alt="">
-                        <p>Charme</p>
-                        <span>可爱系列 足金招财猫串饰</span>
-                        <i>$1,850</i>
-                    </div>
-                </div>-->
+                <!-- <div class="swiper-slide">
+                    <div class="s1 swiper-slide">
+                        <img src="./img/03.jpg" alt="">
+                        <p>Charme</p>
+                        <span>可爱系列 足金招财猫串饰</span>
+                        <i>$1,850</i>
+                </div> -->
             </div>
             <!-- 这是swiper底下的原点 -->
             <div class="swiper-pagination"></div>
@@ -387,26 +366,13 @@
 
     </footer>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 4,   // 当前展示的个数
-            spaceBetween: 30,   // 每个swiper-slide之间的距离
-            slidesPerGroup: 1,  // 步进数
-            loop: true,			// 是否循环
-            loopFillGroupWithBlank: true,  // 在最后一个是否展示前面的个数
-            pagination: {
-                el: '.swiper-pagination',  // 你原点的类名
-                clickable: true,           // 是否可以点击
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',  // 下一个按钮类名
-                prevEl: '.swiper-button-prev',  // 上一个按钮类名
-            },
-        });
-        if (getCookie("uid")) {
-            $(".logw").css("display", "none");
-            $(".xinyuan").css("left", "18px")
-            $(".yuan").css("left", "110px")
-
+        function clicklist(pid) {
+            $(".s1").click(function () {
+                // let prod = JSON.parse(localStorage.getItem("productData"));
+                // console.log(prod);
+                setCookie("pid", $(this).attr("data-id"))
+                window.location.replace("detail.html");
+            })
         }
     </script>
 </body>
