@@ -52,7 +52,9 @@
                     </div>
                 </div>
                 <!--左边item结束 -->
-                <div class="logo"></div>
+                <a href="index.html">
+                    <div class="logo"></div>
+                </a>
                 <div class="right-sh">
                     <!-- rightsomething -->
                     <div class="item">
@@ -417,7 +419,7 @@
                 success: function (result) {
                     if (result.code == 1) {
                         alert("登陆成功,点击确定跳转到首页")
-                        var uid = setCookie("uid", result.data.id)
+                        var id = setCookie("id", result.data.id)
                         var token = setCookie("token", result.data.token)
                         var username = setCookie("username", result.data.username)
                         window.location.replace("/index.html");

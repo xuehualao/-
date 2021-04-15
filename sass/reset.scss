@@ -304,6 +304,8 @@ header{
 
             }
             .cart{
+                max-height: 500px;
+                overflow:auto;
                 z-index: 9999;
                 display: none;
                 padding: 10px;
@@ -314,7 +316,8 @@ header{
                 background-color: #fff;
                 box-shadow:0px 0px 20px 2px #C7C7C7;                    margin: 0;
                 padding: 10px;
-                
+                display: flex;
+                flex-direction: column;
                 .jz{
                     display: block;
                     padding: 8px 16px;
@@ -328,10 +331,15 @@ header{
                     height: 95px;
                     margin: 10px auto;
                     display: flex;
+                    display: flex;
                     justify-content: space-between;
                     .cartimg{
                         height:95px;
                         width: 95px;
+                    }
+                    .cartlistwrap{
+                        display: flex;
+                        flex-direction: column;
                     }
                     .carttitle{
                         height: 95px;

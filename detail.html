@@ -54,7 +54,9 @@
                     </div>
                 </div>
                 <!--左边item结束 -->
-                <div class="logo"></div>
+                <a href="index.html">
+                    <div class="logo"></div>
+                </a>
                 <div class="right-sh">
                     <!-- rightsomething -->
                     <div class="item">
@@ -72,10 +74,10 @@
                             <div class="iconwrap gouwudai1">
                                 <span class="iconfont icon-gouwudai"></span>
                                 <div class="yuan">
-                                    <p>0</p>
-
                                 </div>
                             </div>
+
+
                             <a href="">金价资讯</a>
                         </div>
 
@@ -121,17 +123,21 @@
                     <span class="iconfont icon-gouwudai"></span>
                 </div>
                 <div class="cart">
-                    <p>我的购物袋(4)</p>
-                    <div class="cartlist">
-                        <img class="cartimg" src="./img/01.jpg" width="10%" h alt="">
-                        <div class="carttitle">
-                            <p>charme</p>
-                            <p>爱情童话系列 足金串珠</p>
-                            <p>材质:足金</p>
-                            <p>￥1,450</p>
-                        </div>
+                    <p class="mycart"></p>
+                    <div class="cartw">
+                        <!--<div class="cartlistwrap">
+                                <div class="cartlist">
+                                    <img class="cartimg" src="./img/01.jpg" width="10%" h alt="">
+                                    <div class="carttitle">
+                                        <p>charme</p>
+                                        <p>爱情童话系列 足金串珠</p>
+                                        <p>材质:足金</p>
+                                        <p>￥1,450</p>
+                                    </div>
+                                </div>
+                            </div>-->
                     </div>
-                    <p class="zongji">总计:￥6,200</p>
+                    <p class="zongji"></p>
                     <a class="jz" href="">结账</a>
                 </div>
             </div>
@@ -210,60 +216,190 @@
         </div>
 
     </footer>
-    <script>
-        var cookie = getCookie("pid");
-        $(".iconwrap2").mouseover(function () {
-            $(".cart").fadeIn();
-        })
-        $(".iconwrap2").mouseout(function () {
-            $(".cart").hide();
-        })
-        $(".cart").mouseover(function () {
-            $(".cart").show();
-        })
-        $(".cart").mouseout(function () {
-            $(".cart").hide();
-        })
+</body>
+<script>
+    var pid = getCookie("pid");
+    var uid = getCookie("id");
+    getCookie("token")
+    $(".iconwrap2").mouseover(function () {
+        $(".cart").fadeIn();
+    })
+    $(".iconwrap2").mouseout(function () {
+        $(".cart").hide();
+    })
+    $(".cart").mouseover(function () {
+        $(".cart").show();
+    })
+    $(".cart").mouseout(function () {
+        $(".cart").hide();
+    })
+    let zongji = "";
+    //加载页面
+    $.ajax({
+        type: "get",
+        async: false,
+        cache: false,
+        url: `http://jx.xuzhixiang.top/ap/api/detail.php?id=${pid}`,
+        success: function (result) {
+            localStorage.setItem("productData", JSON.stringify(result.data));
+            var productData = JSON.parse(localStorage.getItem("productData"));
+            let str = "";
+            setCookie("pimg", productData.pimg);
+            setCookie("pname", productData.pname);
+            setCookie("pprice", productData.pprice);
+            str += `
+                    <div class="col-md-7 col-xs-12 col-img ">
+                        <img class="my-foto" src="${productData.pimg}" data-large="./img/full.jpg" title="Фото">
+                    </div>
+                    <div class="col-md-5 col-ctn">
+                        <div class="protitle">Charme</div>
+                        <h4>${productData.pname}</h4>
+                        <p>￥${productData.pprice}</p>
+                        <div class="promd"></div>
+                        <a class="fackbtn">
+                            只需100块，随意选择您喜爱的Charme
+                        </a>
+                        <a class="joincart" data-id="${productData.pid}">
+                            加入购物袋
+                        </a>
+                        <a class="round">
+                            即时分店库存查询
+                        </a>
+                        <div class="p">需要协助？ (+86) 400 830 1878</div>
+                    </div>
+            `
+            $("main").html(str)
+
+
+            /* if (getCookie()) {
+                 $(".logw").css("display", "none");
+                 $(".xinyuan").css("left", "18px")
+                 $(".yuan").css("left", "110px")
+            }*/
+        }
+    })
+
+    //显示(查询)购物车列表
+    var num = 0;
+    if (getCookie(uid)) {
         $.ajax({
             type: "get",
             async: false,
             cache: false,
-            url: `http://jx.xuzhixiang.top/ap/api/detail.php?id=${cookie}`,
+            url: `http://jx.xuzhixiang.top/ap/api/cart-list.php?id=${uid}`,
             success: function (result) {
-                localStorage.setItem("productData", JSON.stringify(result.data));
-                var productData = JSON.parse(localStorage.getItem("productData"));
-                let str = "";
-                console.log(productData.pname, "---");
-                str += `
-                    <div class="col-md-7 col-xs-12 col-img ">
-                        <img class="my-foto" src="${productData.pimg}" data-large="./img/full.jpg" title="Фото">
-                    </div>
-                    <div class="col-md-5 col-ctn">
-                        <div class="protitle">Charme</div>
-                        <h4>${productData.pname}</h4>
-                        <p>￥${productData.pprice}</p>
-                        <div class="promd"></div>
-                        <a class="fackbtn">
-                            只需100块，随意选择您喜爱的Charme
-                        </a>
-                        <a class="joincart" data-uid="${productData.uid}" data-id="${productData.pid}">
-                            加入购物袋
-                        </a>
-                        <a class="round">
-                            即时分店库存查询
-                        </a>
-                        <div class="p">需要协助？ (+86) 400 830 1878</div>
-                    </div>
-            `
-                $("main").html(str)
-                // if (getCookie()) {
-                //     $(".logw").css("display", "none");
-                //     $(".xinyuan").css("left", "18px")
-                //     $(".yuan").css("left", "110px")
-                //}
+                localStorage.setItem("cartlist", JSON.stringify(result.data));
+                var cartlist = JSON.parse(localStorage.getItem("cartlist"));
+                console.log(cartlist);
+                let strcart = "";
+                let num = 0;
+                cartlist.forEach((item) => {
+                    strcart += `
+                    <div class="cartlist">
+                        <img class="cartimg" src="${item['pimg']}" width="10%" h alt="">
+                        <div class="carttitle">
+                            <p>charme</p>
+                            <p>${item['pname']}</p>
+                            <p >材质:足金</p>
+                            <p>￥${item['pprice']}
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="plus">+&nbsp;</span>
+                                <span class="jian">-&nbsp;</span>
+                                <span class="cheng">×&nbsp;</span>
+                            </p>
+                        </div>
+                    </div>
+                `
+                    num++
+                    $(".cartw").html(strcart);
+                    zongji = Number(item['pprice']);
+                    zongji += zongji
+                    console.log(Number(item['pprice']));
+                    $(".zongji").html("总计:￥" + zongji)
+                    $(".yuan").html("<p>" + num + "</p>")
+                    $(".mycart").html("我的购物袋" + "(" + num + ")")
+
+                })
             }
+
         })
 
-    </script>
+    }
+
+    //加入购物车接口
+    $.ajax({
+        type: "get",
+        async: false,
+        cache: false,
+        url: `http://jx.xuzhixiang.top/ap/api/add-product.php?uid=${uid}&pid=${pid}&pnum=1`,
+        success: function (result) {
+            // $(".joincart").click(function () {
+            //     alert("加入购入车成功")
+            // })
+            $(".joincart").click(
+                function () {
+                    $(".cart").fadeIn()
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        cache: false,
+                        url: `http://jx.xuzhixiang.top/ap/api/cart-list.php?id=${uid}`,
+                        success: function (result) {
+                            localStorage.setItem("cartlist", JSON.stringify(result.data));
+                            var cartlist = JSON.parse(localStorage.getItem("cartlist"));
+                            console.log(cartlist);
+                            let strcart = "";
+                            let num = 0;
+                            cartlist.forEach((item) => {
+                                strcart += `
+                    <div class="cartlist">
+                        <img class="cartimg" src="${item['pimg']}" width="10%" h alt="">
+                        <div class="carttitle">
+                            <p>charme</p>
+                            <p>${item['pname']}</p>
+                            <p >材质:足金</p>
+                            <p>￥${item['pprice']}
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="plus">+&nbsp;</span>
+                                <span class="jian">-&nbsp;</span>
+                                <span class="cheng">×&nbsp;</span>
+                            </p>
+                        </div>
+                    </div>
+                `
+                                num++
+                                $(".cartw").html(strcart);
+                                zongji = Number(item['pprice']);
+                                zongji += zongji
+                                console.log(Number(item['pprice']));
+                                $(".zongji").html("总计:￥" + zongji)
+                                $(".yuan").html("<p>" + num + "</p>")
+                                $(".mycart").html("我的购物袋" + "(" + num + ")")
+
+                            })
+                        }
+
+                    })
+                })
+
+        }
+
+    })
+
+    //删除购物车
+    $(".jian").click(function () {
+        $.ajax({
+            type: "get",
+            async: false,
+            cache: false,
+            url: `http://jx.xuzhixiang.top/ap/api/cart-delete.php?uid=${uid}&pid=${pid}`,
+            success: function (result) {
+                $(".jian").css("cursor", "pointer")
+                alert("商品已删除")
+            }
+        })
+    })
+
+</script>
 
 </html>
